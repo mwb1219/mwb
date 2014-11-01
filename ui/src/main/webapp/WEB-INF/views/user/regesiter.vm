@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+	<h1><font face="华文新魏">用户注册</font></h1>
+	<form action="regesiter" method="post">
+		<table>
+			<tr align=center><td><font face=楷体 size=4>用户名：</font></td><td><input type="text" name="username"/></td></tr>
+			<tr align=center><td><font face=楷体 size=4>密码：</font></td><td><input type="password" name="password"/></td></tr>
+			<tr align=center><td><font face=楷体 size=4>姓名：</font></td><td><input type="text" name="name"/></td></tr>
+			<tr align=center><td><font face=楷体 size=4>性别：</font></td><td><input type="radio" name="sex" value="男" />男&nbsp;&nbsp;<input type="radio" name="sex" value="女"/>女</td></tr>
+			<tr align=center><td><font face=楷体 size=4>年龄：</font></td><td><input type="text" name="age"/></td></tr>
+			<tr align=center><td><font face=楷体 size=4>国家：</font></td><td><input type="text" name="country"/></td></tr>
+			<tr align=center><td><font face=楷体 size=4>省份：</font></td><td><input type="text" name="province"/></td></tr>
+			<tr align=center><td><font face=楷体 size=4>城市：</font></td><td><input type="text" name="city"/></td></tr>
+			<tr align=center><td><input type="submit" value="注册"/></td></tr>
+		</table>
+	</form>
+</center>
+</body>
+</html>

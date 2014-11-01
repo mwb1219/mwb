@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	用户名：$userLogin.username<br/>注册成功！请点击<a href="tologin">登录</a>
+	
+	
+</body>
+</html>

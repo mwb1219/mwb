@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <properties resource="myBatis/config.properties">
+  	<property name="username" value="sa"/>
+  	<property name="password" value="qwerty"/>
+  </properties>
+  <typeAliases>
+  	<typeAlias type="cn.gyyx.logic.beans.UserInfo" alias="UserInfo"/>
+  	<typeAlias type="cn.gyyx.logic.beans.UserLogin" alias="UserLogin"/>
+  	<typeAlias type="cn.gyyx.logic.beans.UserLog" alias="UserLog"/>
+  </typeAliases>
+  <environments default="user">
+    <environment id="user">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+    <mapper resource="myBatis/mybatis-mapper/UserInfo.xml"/>
+  </mappers>
+</configuration>

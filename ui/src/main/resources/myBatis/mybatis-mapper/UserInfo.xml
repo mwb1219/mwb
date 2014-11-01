@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="cn.gyyx.logic.dao.UserMapper">
+  	<select id="selectUserByCode" parameterType="Integer" resultType="UserInfo">
+  		select * from us_userinfo_tb where code=#{code}
+  	</select>
+  	<select id="selectUser" resultMap="userInfoMap">
+  		select * from us_userinfo_tb
+  	</select>
+  	<select id="selectLogin" parameterType="UserInfo" resultMap="userLoginMap">
+  		select * from us_userlogin_tb where username=#{username} and password=#{password}
+  	</select>
+  	<select id="selectUserByLoginCode" parameterType="Integer" resultType="UserInfo">
+  		select * from us_userinfo_tb where code=(select userinfo_id from us_userlogin_tb where code=#{code})
+  	</select>
+  	<insert id="insertUser" parameterType="UserInfo" useGeneratedKeys="true" keyProperty="code">
+		insert into us_userinfo_tb (name,sex,age,country,province,city)
+		values (#{name},#{sex},#{age},#{country},#{province},#{city})
+  	</insert>
+  	<insert id="insertUserLogin" parameterType="UserLogin" useGeneratedKeys="true" keyProperty="code">
+  		insert into us_userlogin_tb (username,password,userinfo_id)
+  		values (#{username},#{password},#{userid})
+  	</insert>
+  	<insert id="insertLog" parameterType="UserLog" useGeneratedKeys="true" keyProperty="code">
+  		insert into us_userlog_tb (username,ip,create_time,work) 
+  		values (#{username},#{ip},#{createTime},#{work})
+  	</insert>
+  	<resultMap type="UserInfo" id="userInfoMap">
+  		<result property="code" column="code"/>
+  		<result property="name" column="name"/>
+  		<result property="sex" column="sex"/>
+  		<result property="age" column="age"/>
+  		<result property="country" column="country"/>
+  		<result property="province" column="province"/>
+  		<result property="city" column="city"/>
+  	</resultMap>
+  	<resultMap type="UserLogin" id="userLoginMap">
+  		<result property="code" column="code"/>
+  		<result property="username" column="username"/>
+  		<result property="password" column="password"/>
+  		<result property="userid" column="userinfo_id"/>
+  	</resultMap>
+  	<resultMap type="UserLog" id="userLogMap">
+  		<result property="code" column="code"/>
+  		<result property="username" column="username"/>
+  		<result property="ip" column="ip"/>
+  		<result property="createTime" column="create_time"/>
+  		<result property="work" column="work"/>
+  	</resultMap>
+  </mapper>
