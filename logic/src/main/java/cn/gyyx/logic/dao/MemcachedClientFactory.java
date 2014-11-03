@@ -13,7 +13,7 @@ import net.rubyeye.xmemcached.XMemcachedClient;
  * 创建时间： 2014年10月28日
  * 版本号：v1.0
  * 本类主要用途描述：
- * MemcachedClient对象的单例类
+ * MemcachedClient工厂
 -------------------------------------------------------------------------*/
 public class MemcachedClientFactory {
 	private static MemcachedClient memC;
