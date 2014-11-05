@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import cn.gyyx.logic.beans.UserInfo;
 import cn.gyyx.logic.beans.UserLog;
 import cn.gyyx.logic.beans.UserLogin;
+import cn.gyyx.logic.factory.MybatisConnectionFactory;
 
 /*-------------------------------------------------------------------------
 * 版权所有：北京光宇在线科技有限责任公司

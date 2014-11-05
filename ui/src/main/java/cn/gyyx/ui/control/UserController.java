@@ -5,7 +5,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import cn.gyyx.logic.beans.UserInfo;
 import cn.gyyx.logic.beans.UserLogin;
-import cn.gyyx.logic.service.UserService;
+import cn.gyyx.logic.bll.UserService;
 import cn.gyyx.ui.filter.UserLoginFilter;
 
 /*-------------------------------------------------------------------------

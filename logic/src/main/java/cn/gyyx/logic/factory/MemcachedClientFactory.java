@@ -1,4 +1,4 @@
-package cn.gyyx.logic.dao;
+package cn.gyyx.logic.factory;
 
 
 import java.io.IOException;

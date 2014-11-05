@@ -12,8 +12,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cn.gyyx.logic.beans.UserInfo;
-import cn.gyyx.logic.service.UserService;
 
 public class UserLoginFilter implements Filter{
 	private String encoding;
@@ -70,15 +68,4 @@ public class UserLoginFilter implements Filter{
 		 }
 		 return cookie;
 	 }
-	 
-	 /*public static void main(String[] args){
-			long start1 = System.currentTimeMillis();
-			UserInfo user = UserService.getUserInfoByLoginCode(7);
-			long end1 = System.currentTimeMillis();
-			System.out.println("user"+user+",时间："+(end1-start1));
-			long start2 = System.currentTimeMillis();
-			user = UserService.getUserInfoByLoginCode(7);
-			long end2 = System.currentTimeMillis();
-			System.out.println("user"+user+",时间："+(end2-start2));
-		}*/
 }

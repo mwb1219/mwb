@@ -1,4 +1,4 @@
-package cn.gyyx.logic.service;
+package cn.gyyx.logic.bll;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -9,9 +9,9 @@ import net.rubyeye.xmemcached.exception.MemcachedException;
 import cn.gyyx.logic.beans.UserInfo;
 import cn.gyyx.logic.beans.UserLog;
 import cn.gyyx.logic.beans.UserLogin;
-import cn.gyyx.logic.dao.MemcachedClientFactory;
 import cn.gyyx.logic.dao.UserDaoFactory;
 import cn.gyyx.logic.dao.UserInfoDao;
+import cn.gyyx.logic.factory.MemcachedClientFactory;
 /*-------------------------------------------------------------------------
 * 版权所有：北京光宇在线科技有限责任公司
 * 作者：mawenbin
@@ -92,27 +92,6 @@ public class UserService {
 		}
 		return result;
 	}
-	/**
-	 * 通过用户登录Code查找出UserInfo信息
-	 * @param code 用户登录code
-	 * */
-	/*public static UserInfo getUserInfoByLoginCode(int code){
-		UserInfo userInfo = null;
-		try {
-			userInfo = memC.get("user"+code);
-			if(userInfo == null){
-				userInfo = userDao.getUserInfoByLoginCode(code);
-				System.out.println(userInfo);
-				if(userInfo != null){
-					memC.add("user"+code, 12*80, userInfo, 1000*36);
-				}
-			}
-		} catch (TimeoutException | InterruptedException | MemcachedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return userInfo;
-	}*/
 	/**
 	 * 记录日志
 	 * @param username 用户名
